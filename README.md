@@ -19,5 +19,6 @@ yarn build
 ```
 아래 명령어로 패키징할 수 있습니다.
 ```sh
+yarn postpack
 yarn pack
 ```
