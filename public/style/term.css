@@ -1,0 +1,30 @@
+.term-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+
+.term-page > h1 {
+    font-family: 'ImcreSoojin';
+}
+
+.term-page > p {
+    font-size: 0.9rem;
+}
+
+.term-page > ul > li {
+    font-size: 0.8rem;
+}
+
+.term-page > ul > li > a{
+    font-size: 0.7rem;
+    padding: 4px;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    margin-right: 5px;
+}
+
+.term-page > ul > li > a:hover{
+    background: #eeeeee;
+}

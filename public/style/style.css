@@ -1,0 +1,292 @@
+@font-face {
+    font-family: 'ImcreSoojin';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.3/ImcreSoojin.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333333;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, ul, ol, li {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.wrapper {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.sign-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 0;
+}
+
+.sign-page > .sign-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.sign-page > .sign-box > .logo {
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+.sign-page > .sign-box > .logo > video {
+    width: 100%;
+}
+
+.sign-page > .sign-box > h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-family: 'ImcreSoojin';
+    width: 100%;
+    text-align: center;
+}
+
+.sign-page > .sign-box > form > input {
+    padding: 5px;
+    font-size: 0.8rem;
+    display: block;
+    margin-bottom: 10px;
+    border: 1px solid #dddddd;
+    width: 100%;
+}
+
+.sign-page > .sign-box > form > button {
+    padding: 10px;
+    font-size: 0.8rem;
+    display: block;
+    margin-bottom: 10px;
+    border: 1px solid #dddddd;
+    width: 100%;
+    background: #ffffff;
+}
+
+.sign-page > .information {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+.sign-page > .information > a {
+    font-size: 0.8rem;
+    margin-right: 10px;
+}
+
+.sign-page > .information > a:last-child {
+    margin-right: 0;
+}
+
+#course-page > .top-menu {
+    text-align: right;
+}
+
+#course-page > .top-menu > .menu-item {
+    display: inline-block;
+    font-size: 0.8rem;
+}
+
+#course-page > .top-menu > .menu-item:hover {
+    text-decoration: underline;
+}
+
+#course-page > h1 {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    font-family: 'ImcreSoojin';
+}
+
+#course-page > h1 > .loading {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-image: url("/public/img/loading.gif");
+    background-size: 200%;
+    background-position: center;
+    margin-left: 10px;
+}
+
+#course-page > #courses > .course {
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px; 
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    cursor: pointer;
+}
+
+#course-page > #courses > .course:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+#course-page > #courses > .course.selected {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+#course-page > #courses > .course > .name {
+    display: inline-block;
+    font-size: 1rem;
+}
+
+#course-page > #courses > .course > .professor {
+    display: inline-block;
+    font-size: 0.8rem;
+    margin-left: 5px;
+}
+
+#course-page > .selected-course {
+    display: block;
+    border: 1px solid #dddddd;
+}
+
+#course-page > .selected-course > .top {
+    display: block;
+    padding: 20px;
+    border-bottom: 1px solid #dddddd;
+}
+
+#course-page > .selected-course > .top > .name {
+    display: inline-block;
+    font-size: 1.2rem;
+}
+
+#course-page > .selected-course > .top > .name:hover {
+    text-decoration: underline;
+}
+
+#course-page > .selected-course > .top > .professor {
+    display: inline-block;
+    font-size: 0.9rem;
+    margin-left: 10px;
+}
+
+#course-page > .selected-course > .top > .color-information-list {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+#course-page > .selected-course > .top > .color-information-list > .color-information {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+#course-page > .selected-course > .top > .color-information-list > .color-information > .color {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 5px;
+}
+
+#course-page > .selected-course > .top > .color-information-list > .color-information > .color.red {
+    background: #ff6961;
+}
+
+#course-page > .selected-course > .top > .color-information-list > .color-information > .color.green {
+    background: #77dd77;
+}
+
+#course-page > .selected-course > .top > .color-information-list > .color-information > .label {
+    display: inline-block;
+    font-size: 0.8rem;
+}
+
+#course-page > .selected-course > .top > .options {
+    display: inline-flex;
+    align-items: center;
+}
+
+#course-page > .selected-course > .top > .options > .option {
+    display: inline-flex;
+    margin-left: 20px;
+    align-items: center;
+}
+
+#course-page > .selected-course > .top > .options > .option > label {
+    font-size: 0.8rem;
+}
+
+#course-page > .selected-course > .top > .options > .option > input[type="number"] {
+    border: 1px solid #dddddd;
+    padding: 3px;
+    font-size: 0.7rem;
+    width: 30px;
+}
+#course-page > .selected-course > .top > .options > .option > input[type="checkbox"] {
+    width: 10px;
+    height: 10px;
+}
+
+#course-page > .selected-course > .activities {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#course-page > .selected-course > .activities > .videos {
+    grid-column: 1;
+    border-right: 1px solid #dddddd;
+    padding: 20px;
+}
+
+#course-page > .selected-course > .activities > .homeworks {
+    grid-column: 2;
+    padding: 20px;
+}
+
+#course-page > .selected-course > .activities .activity-title {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+#course-page > .selected-course > .activities .activity {
+    display: block;
+    padding: 20px;
+    background: #ff6961;
+    margin-bottom: 20px;
+    color: #ffffff;
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+
+#course-page > .selected-course > .activities .activity.done {
+    background: #77dd77;
+    color: #333333;
+}
+
+#course-page > .selected-course > .activities .activity > .name {
+    grid-column: 1;   
+}
+
+#course-page > .selected-course > .activities .activity > .week {
+    grid-column: 2;
+    font-size: 0.8rem;
+}

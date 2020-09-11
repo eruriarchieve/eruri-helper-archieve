@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "incremental": true,
+    "target": "es5",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "outDir": "dist",
+    "sourceMap": true,
+    "allowJs": true
+  },
+  "include": [
+    "src"
+  ],
+}
