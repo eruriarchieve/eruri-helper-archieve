@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title 이루리 도우미
+        script(src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js")
+        script(src="https://unpkg.com/axios/dist/axios.min.js")
+        link(rel="stylesheet", href="/public/style/style.css")
+    body
+        #course-page.wrapper
+            .top-menu
+                a.menu-item(href="/sign-out") 로그아웃
+            h1 강의 목록
+                .loading(v-show="loading")
+            #courses    
+                .course(v-for="course in courses" @click="selectCourse(course)")
+                    .name {{ course.name }}
+                    .professor ({{ course.professor }})
+                
+            .selected-course(v-if="filteredSelectedCourse")
+                .top
+                    a.name(:href="`http://eruri.kangwon.ac.kr/course/view.php?id=${selectedCourse.id}`" target="_blank") {{ filteredSelectedCourse.name }}
+                    .professor {{ filteredSelectedCourse.professor }}
+                    ul.color-information-list
+                        li.color-information
+                            .color.green
+                            .label 완료
+                        li.color-information
+                            .color.red
+                            .label 미완료
+                    ul.options
+                        li.option
+                            input#option-only-not-done(type="checkbox" v-model="options.onlyNotDone")
+                            label(for="option-only-not-done") &nbsp;완료되지 않은 것만 보기
+                        li.option
+                            input#option-week-filter(type="number" v-model="options.weekFilter")
+                            label(for="option-week-filter") &nbsp;주차 이상만 보기
+
+                .activities
+                    .videos
+                        .activity-title 동영상
+                        .video.activity(v-for="video in filteredSelectedCourse.videos" :class="{ done: video.done }")
+                            .name {{ video.name }}
+                            .week {{ video.week }}주차
+                    .homeworks
+                        .activity-title 과제
+                        .homework.activity(v-for="homework in filteredSelectedCourse.homeworks" :class="{ done: homework.done }")
+                            .name {{ homework.name }}
+                            .week {{ homework.week }}주차
+        
+        script(src="/public/script/main.js")

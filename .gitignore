@@ -1,0 +1,14 @@
+# 빌드
+dist
+build
+
+# Node.js
+node_modules
+
+# 로그
+*.log
+log
+logs
+
+# Mac
+.DS_Store

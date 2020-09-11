@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title 이루리 도우미 | 로그인
+        script(src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js")
+        script(src="https://unpkg.com/axios/dist/axios.min.js")
+        link(rel="stylesheet", href="/public/style/style.css")
+    body
+        .sign-page.wrapper
+            .sign-box
+                .logo
+                    video(src="/public/video/gomduri.mp4" autoplay muted loop)
+                h1 이루리 도우미
+                form(action="/sign" method="post")
+                    input(type="text" class="username" name="username")
+                    input(type="password" class="password" name="password")
+                    button(type="submit") 로그인
+            .information
+                a(href="/term" target="_blank") 안내
+                a(href="https://github.com/cstria0106" target="_blank") &copy;goorm
