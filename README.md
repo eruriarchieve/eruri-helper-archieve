@@ -1,5 +1,9 @@
 # 이루리 도우미
 
+<div style="text-align: center;">
+<img src="https://raw.githubusercontent.com/cstria0106/eruri-helper-standalone/master/public/img/gomduri.png" width="300"></img>
+</div>
+
 강원대학교 e-루리를 크롤링해 강의와 과제 진행 상황을 한눈에 확인하는 애플리케이션입니다.
 
 기존의 [e-루리 도우미](https://github.com/cstria0106/eruri-helper)를 다시 작성한 프로그램입니다.
