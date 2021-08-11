@@ -26,6 +26,7 @@ export default class Crawler {
     async launchBrowser() {
       this.browser = await puppeteer.launch({
         executablePath: getChromiumPath(),
+        headless: false,
       });
     }
 
@@ -34,12 +35,12 @@ export default class Crawler {
       if (this.signedIn) throw new CrawlerError('이미 로그인 중입니다.');
       const page = await this.browser.newPage();
 
-      await page.goto('https://eruri.kangwon.ac.kr', {
+      await page.goto('https://eruri.kangwon.ac.kr/login.php', {
         waitUntil: 'domcontentloaded',
       });
-      await (await page.$('#username')).type(username);
-      await (await page.$('#password')).type(password);
-      await (await page.$('.main_login_btn')).click();
+      await (await page.$('#input-username')).type(username);
+      await (await page.$('#input-password')).type(password);
+      await (await page.$('.submitform .btn.btn-success')).click();
 
       await page.waitForNavigation({
         waitUntil: 'load',
