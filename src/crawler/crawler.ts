@@ -26,7 +26,7 @@ export default class Crawler {
     async launchBrowser() {
       this.browser = await puppeteer.launch({
         executablePath: getChromiumPath(),
-        headless: false,
+        headless: true,
       });
     }
 
